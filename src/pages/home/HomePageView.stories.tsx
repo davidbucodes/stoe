@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import HomePage from ".";
-import { exampleResponse } from "../../../mockData/products/exampleResponse";
+import { exampleResponse } from "../../store/apis/products/exampleResponse";
+import { HomePageView } from "./view";
 
-const meta: Meta<typeof HomePage> = {
-  title: "HomePage",
-  component: HomePage,
+const meta: Meta<typeof HomePageView> = {
+  title: "HomePageView",
+  component: HomePageView,
 };
 
 export default meta;
-type Story = StoryObj<typeof HomePage>;
+type Story = StoryObj<typeof HomePageView>;
 
 export const Default: Story = {
   parameters: {

@@ -1,18 +1,16 @@
-import { Styles } from "@component/pages/home/styles";
-import Link from "next/link";
-import { Product } from "./types";
+import { HomePageView } from "@component/pages/home/view";
+import { useGetProductsQuery } from "@component/store/apis/products/api";
+import { Fragment } from "react";
 
-export default function HomePage({ products }: { products: Product[] }) {
-  return (
-    <Styles.HomePage>
-      {products?.map((product) => (
-        <Styles.Product>
-          <Styles.ProductName>{product.title}</Styles.ProductName>
-          <Styles.ProductLink>
-            <Link href={`/product/${product.id}`}>Product page</Link>
-          </Styles.ProductLink>
-        </Styles.Product>
-      ))}
-    </Styles.HomePage>
-  );
+export default function HomePage() {
+  const { isLoading, data: products, isError } = useGetProductsQuery(null);
+
+  if (isError) {
+    return <Fragment>Error</Fragment>;
+  }
+  if (isLoading) {
+    return <Fragment>Loading</Fragment>;
+  }
+
+  return <HomePageView products={products!} />;
 }
