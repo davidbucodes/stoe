@@ -1,7 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { Currency } from "@component/pages/api/exchangeRates";
 import { ProductPageView } from "@component/pages/product/view";
-import { exampleResponse } from "../../store/apis/products/exampleResponse";
+import { exampleResponse as exchangeRatesExampleResponse } from "../../store/apis/exchangeRates/exampleResponse";
+import { exampleResponse as productsExampleResponse } from "../../store/apis/products/exampleResponse";
 
 const meta: Meta<typeof ProductPageView> = {
   title: "ProductPageView",
@@ -20,6 +22,11 @@ export const Default: Story = {
     },
   },
   args: {
-    product: exampleResponse[0],
+    product: productsExampleResponse[0],
+    exchangeRates: exchangeRatesExampleResponse,
+    selectedCurrency: Currency.JPY,
+  },
+  argTypes: {
+    selectedCurrency: Currency,
   },
 };

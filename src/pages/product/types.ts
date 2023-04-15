@@ -1,3 +1,2 @@
-import { ApiProduct } from "@component/store/apis/products/types";
-
-export type Product = ApiProduct;
+export type { ExchangeRates } from "@component/pages/api/exchangeRates";
+export type { Product } from "@component/pages/api/products";

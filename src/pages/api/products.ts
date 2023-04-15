@@ -5,9 +5,9 @@ type ResponseError = {
   error: ErrorMessage;
 };
 type ResponseData = ProductsApiResponse;
-export type ProductsApiResponse = ApiProduct[];
+export type ProductsApiResponse = Product[];
 
-export type ApiProduct = {
+export type Product = {
   id: number;
   title: string;
   price: number;

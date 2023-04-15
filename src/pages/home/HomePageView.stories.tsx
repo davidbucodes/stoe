@@ -15,7 +15,7 @@ export const Default: Story = {
   parameters: {
     nextjs: {
       router: {
-        basePath: "/",
+        basePath: "/home",
       },
     },
   },

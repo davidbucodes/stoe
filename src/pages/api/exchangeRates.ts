@@ -4,6 +4,7 @@ export enum Currency {
   EUR = "EUR",
   GBP = "GBP",
   JPY = "JPY",
+  USD = "USD",
 }
 type ErrorMessage = "Method not supported";
 type ResponseError = {
@@ -12,18 +13,20 @@ type ResponseError = {
 export type ResponseData = {
   exchangeRates: ExchangeRates;
 };
+export type ExchangeRatesApiResponse = ResponseData;
 
 export type ExchangeRates = {
-  baseCurrency: "USD";
+  baseCurrency: Currency.USD;
   rates: Record<Currency, number>;
 };
 
 const exchangeRates: ExchangeRates = {
-  baseCurrency: "USD",
+  baseCurrency: Currency.USD,
   rates: {
     EUR: 0.9,
     GBP: 0.801623,
     JPY: 132,
+    USD: 1,
   },
 };
 

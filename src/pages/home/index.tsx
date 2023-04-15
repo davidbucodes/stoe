@@ -5,12 +5,12 @@ import { Fragment } from "react";
 export default function HomePage() {
   const { isLoading, data: products, isError } = useGetProductsQuery(null);
 
-  if (isError) {
-    return <Fragment>Error</Fragment>;
-  }
   if (isLoading) {
     return <Fragment>Loading</Fragment>;
   }
+  if (isError || !products) {
+    return <Fragment>Error</Fragment>;
+  }
 
-  return <HomePageView products={products!} />;
+  return <HomePageView products={products} />;
 }
