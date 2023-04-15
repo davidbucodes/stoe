@@ -4,7 +4,7 @@ import { exampleResponse } from "../../store/apis/products/exampleResponse";
 import { HomePageView } from "./view";
 
 const meta: Meta<typeof HomePageView> = {
-  title: "HomePageView",
+  title: "Pages/HomePage",
   component: HomePageView,
 };
 

@@ -1,12 +1,10 @@
-import { Currency, ExchangeRates } from "@component/pages/api/exchangeRates";
+import SelectCurrency from "@component/components/selectCurrency";
 import { Styles } from "./styles";
 
-export function TopbarView({
-  exchangeRates,
-  selectedCurrency,
-}: {
-  exchangeRates: ExchangeRates;
-  selectedCurrency: Currency;
-}) {
-  return <Styles.Topbar>Selected: {selectedCurrency}</Styles.Topbar>;
+export function TopbarView() {
+  return (
+    <Styles.Topbar>
+      <SelectCurrency />
+    </Styles.Topbar>
+  );
 }
