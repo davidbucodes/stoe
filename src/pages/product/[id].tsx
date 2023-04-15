@@ -17,6 +17,10 @@ export default function ProductPage() {
     isError: isErrorGetExchangeRates,
   } = useGetExchangeRatesQuery(null);
 
+  const selectedCurrency = useAppSelector(
+    (state) => state.options.selectedCurrency
+  );
+
   const router = useRouter();
 
   if (isLoadingGetProducts || isLoadingGetExchangeRates) {
@@ -31,9 +35,6 @@ export default function ProductPage() {
     return <Fragment>Error</Fragment>;
   }
 
-  const selectedCurrency = useAppSelector(
-    (state) => state.options.selectedCurrency
-  );
   const { id: productId } = router.query;
   const product = products.find(({ id }) => String(id) === productId);
   if (!product) {
