@@ -24,7 +24,7 @@ const exchangeRates: ExchangeRates = {
   baseCurrency: Currency.USD,
   rates: {
     EUR: 0.9,
-    GBP: 0.801623,
+    GBP: 0.8,
     JPY: 132,
     USD: 1,
   },

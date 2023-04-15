@@ -1,5 +1,5 @@
 import { Currency } from "@component/pages/api/exchangeRates";
-import convertCurrency from "@component/utils/convertCurrency";
+import convertCurrency from "@component/utils/convertCurrency/convertCurrency";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Styles } from "./styles";
