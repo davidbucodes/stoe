@@ -5,7 +5,6 @@ import { Styles } from "./styles";
 export function LayoutView({ children }: PropsWithChildren<{}>) {
   return (
     <Styles.Layout>
-      Layout
       <Topbar />
       <Styles.PageWrapper>{children}</Styles.PageWrapper>
     </Styles.Layout>
