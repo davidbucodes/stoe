@@ -12,7 +12,7 @@ export function TopbarView() {
 
   return (
     <Styles.Topbar>
-      <Styles.TopbarTitle>MyStore</Styles.TopbarTitle>
+      <Styles.Logo>MyStore</Styles.Logo>
       <Styles.OptionMenu>
         <Styles.OptionMenuButton onClick={toggleOptionsMenu}>
           Currency

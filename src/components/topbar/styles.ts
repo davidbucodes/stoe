@@ -1,4 +1,4 @@
-import { SharedStyles } from "@component/pages/sharedStyles";
+import { SharedStyles } from "@component/styles/shared";
 import styled from "styled-components";
 
 export namespace Styles {
@@ -9,8 +9,11 @@ export namespace Styles {
     flex-shrink: 0;
     flex-grow: 0;
   `;
-  export const TopbarTitle = styled.div`
+  export const Logo = styled.div`
     flex-grow: 1;
+    font-family: ${({ theme }) => theme.font.logo};
+    font-size: ${({ theme }) => theme.fontSize.logo};
+    padding: 1vh 0 0 1vw;
   `;
   export const OptionMenu = styled.div`
     position: relative;
@@ -23,7 +26,8 @@ export namespace Styles {
     position: absolute;
     top: 70px;
     background: white;
-    min-width: 20vw;
+    width: 10vw;
+    min-width: 10vw;
     right: 0;
   `;
 }

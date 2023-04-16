@@ -1,4 +1,4 @@
-import { SharedStyles } from "@component/pages/sharedStyles";
+import { SharedStyles } from "@component/styles/shared";
 import styled from "styled-components";
 
 export namespace Styles {
