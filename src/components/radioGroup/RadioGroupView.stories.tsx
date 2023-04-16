@@ -4,7 +4,7 @@ import { RadioGroupView } from "@component/components/radioGroup/view";
 import { Currency } from "@component/pages/api/exchangeRates";
 
 const meta: Meta<typeof RadioGroupView> = {
-  title: "Input/RadioGroup",
+  title: "Input/RadioGroupView",
   component: RadioGroupView,
 };
 
@@ -14,6 +14,7 @@ type Story = StoryObj<typeof RadioGroupView>;
 export const Default: Story = {
   args: {
     options: Object.values(Currency),
+    selectedOption: Currency.EUR,
   },
   argTypes: {
     selectedOption: Currency,

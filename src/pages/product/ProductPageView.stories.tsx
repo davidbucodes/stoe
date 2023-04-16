@@ -6,7 +6,7 @@ import { exampleResponse as exchangeRatesExampleResponse } from "../../store/api
 import { exampleResponse as productsExampleResponse } from "../../store/apis/products/exampleResponse";
 
 const meta: Meta<typeof ProductPageView> = {
-  title: "Pages/ProductPage",
+  title: "Pages/ProductPageView",
   component: ProductPageView,
 };
 

@@ -4,7 +4,7 @@ import { SelectCurrencyView } from "@component/components/selectCurrency/view";
 import { Currency } from "@component/pages/api/exchangeRates";
 
 const meta: Meta<typeof SelectCurrencyView> = {
-  title: "Input/SelectCurrency",
+  title: "Input/SelectCurrencyView",
   component: SelectCurrencyView,
 };
 

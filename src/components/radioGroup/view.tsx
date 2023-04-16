@@ -12,7 +12,7 @@ export function RadioGroupView({
   return (
     <Styles.RadioGroup>
       {options.map((option) => (
-        <Styles.RadioButton>
+        <Styles.RadioButton key={option}>
           <Styles.RadioButtonInput
             checked={option === selectedOption}
             value={option}
