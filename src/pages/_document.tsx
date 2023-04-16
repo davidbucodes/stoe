@@ -13,8 +13,11 @@ export default function Document() {
             width: 100%;
             max-height: 100%;
             max-width: 100%;
+            min-height: 100%;
+            min-width: 100%;
             margin: 0;
             display: flex;
+            flex: 1;
             flex-grow: 1;
             overflow: hidden;
           }

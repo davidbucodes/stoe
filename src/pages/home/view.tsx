@@ -22,28 +22,30 @@ export function HomePageView({ products }: { products: Product[] }) {
 
   return (
     <Styles.HomePage>
-      {Object.entries(productsByCategories).map(([category, products]) => (
-        <Styles.Category key={category}>
-          <Styles.CategoryName>{category}</Styles.CategoryName>
-          <Styles.CategoryProducts>
-            {products.map((product) => (
-              <Styles.Product key={product.id}>
-                <Styles.ProductLink>
-                  <Link href={`/product/${product.id}`}>
-                    <Styles.ProductName>{product.title}</Styles.ProductName>
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      width={200}
-                      height={200}
-                    />
-                  </Link>
-                </Styles.ProductLink>
-              </Styles.Product>
-            ))}
-          </Styles.CategoryProducts>
-        </Styles.Category>
-      ))}
+      <Styles.Categories>
+        {Object.entries(productsByCategories).map(([category, products]) => (
+          <Styles.Category key={category}>
+            <Styles.CategoryName>{category}</Styles.CategoryName>
+            <Styles.CategoryProducts>
+              {products.map((product) => (
+                <Styles.Product key={product.id}>
+                  <Styles.ProductLink>
+                    <Link href={`/product/${product.id}`}>
+                      <Styles.ProductName>{product.title}</Styles.ProductName>
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        width={200}
+                        height={200}
+                      />
+                    </Link>
+                  </Styles.ProductLink>
+                </Styles.Product>
+              ))}
+            </Styles.CategoryProducts>
+          </Styles.Category>
+        ))}
+      </Styles.Categories>
     </Styles.HomePage>
   );
 }
