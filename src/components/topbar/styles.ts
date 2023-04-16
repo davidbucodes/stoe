@@ -1,11 +1,13 @@
+import { SharedStyles } from "@component/pages/sharedStyles";
 import styled from "styled-components";
 
 export namespace Styles {
-  export const Topbar = styled.div`
-    display: flex;
+  export const Topbar = styled(SharedStyles.Flex)`
     flex-direction: row;
-    height: 7vh;
+    height: 70px;
+    width: 100%;
     flex-shrink: 0;
+    flex-grow: 0;
   `;
   export const TopbarTitle = styled.div`
     flex-grow: 1;
@@ -19,7 +21,7 @@ export namespace Styles {
   `;
   export const OptionMenuPopup = styled.div`
     position: absolute;
-    top: 7vh;
+    top: 70px;
     background: white;
     min-width: 20vw;
     right: 0;
