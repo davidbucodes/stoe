@@ -16,6 +16,13 @@ export const theme = {
     loading: "8vh",
     error: "7vh",
   },
+  colors: {
+    green: {
+      dark: "#04825c",
+      light: "#68a794",
+      grey: "#accec3",
+    },
+  },
 };
 
 type CustomTheme = typeof theme;

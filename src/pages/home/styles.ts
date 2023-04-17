@@ -13,7 +13,7 @@ export namespace Styles {
     font-weight: bold;
     padding: 5vh 0 2vh 0;
     text-align: center;
-    color: #04825c;
+    color: ${({ theme }) => theme.colors.green.dark};
     -webkit-text-stroke: 2px white;
   `;
 
@@ -47,7 +47,7 @@ export namespace Styles {
       transform: translateY(-50%);
       font-size: 7vw;
       background-color: white;
-      color: #04825c;
+      color: ${({ theme }) => theme.colors.green.dark};
       font-weight: bold;
       padding: 1vw;
       text-align: center;
@@ -55,8 +55,7 @@ export namespace Styles {
       height: 7vw;
       width: 7vw;
       line-height: 7vw;
-      border: 3px solid #04825c;
-      text-align: center;
+      border: 3px solid ${({ theme }) => theme.colors.green.dark};
     }
   `;
   export const Scroller = styled(SharedStyles.Flex)`
@@ -102,12 +101,12 @@ export namespace Styles {
       display: block;
       content: "";
       transition: height 120ms linear;
-      background: rgb(70, 182, 255);
+      background: rgb(70 255 124);
       background: linear-gradient(
         180deg,
         rgba(70, 182, 255, 0.21113689095127608) 21%,
-        rgba(34, 138, 255, 0.44547563805104406) 41%,
-        rgba(0, 97, 255, 0.7192575406032482) 65%
+        rgb(34 255 139 / 45%) 41%,
+        rgb(0 255 149 / 72%) 65%
       );
     }
     &:hover::before {

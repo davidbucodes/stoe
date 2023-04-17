@@ -22,7 +22,7 @@ export namespace Styles {
     font-family: ${({ theme }) => theme.font.logo};
     font-size: ${({ theme }) => theme.fontSize.logo};
     padding: 0 1vh 0 2vw;
-    color: #04825c;
+    color: ${({ theme }) => theme.colors.green.dark};
   `;
   export const OptionMenu = styled.div`
     position: relative;

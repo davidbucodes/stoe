@@ -32,8 +32,8 @@ export default function Document() {
           }
            
           ::-webkit-scrollbar-thumb {
-            background-color: lightgrey;
-            outline: 1px solid darkgray;
+            background-color: #accec3;
+            outline: 1px solid #68a794;
             border-radius: 10px;
           }
             `}
