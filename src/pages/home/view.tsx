@@ -1,5 +1,5 @@
 import { Styles } from "@component/pages/home/styles";
-import { Dictionary, groupBy } from "lodash";
+import { Dictionary, capitalize, groupBy } from "lodash";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -20,27 +20,42 @@ export function HomePageView({ products }: { products: Product[] }) {
     }
   }, [products]);
 
+  const productWidth = 200;
+  const productHeight = productWidth;
+
   return (
     <Styles.HomePage>
       <Styles.Categories>
         {Object.entries(productsByCategories).map(([category, products]) => (
           <Styles.Category key={category}>
-            <Styles.CategoryName>{category}</Styles.CategoryName>
+            <Styles.CategoryName>{capitalize(category)}</Styles.CategoryName>
             <Styles.CategoryProducts>
               {products.map((product) => (
-                <Styles.Product key={product.id}>
-                  <Styles.ProductLink>
+                <Styles.ProductLink>
+                  <Styles.Product
+                    width={productWidth}
+                    height={productHeight}
+                    key={product.id}
+                  >
                     <Link href={`/product/${product.id}`}>
-                      <Styles.ProductName>{product.title}</Styles.ProductName>
+                      <Styles.ProductNameContainer
+                        width={productWidth}
+                        height={productHeight}
+                      >
+                        <Styles.ProductName width={productWidth}>
+                          {product.title}
+                        </Styles.ProductName>
+                      </Styles.ProductNameContainer>
+
                       <Image
                         src={product.image}
                         alt={product.title}
-                        width={200}
-                        height={200}
+                        width={productWidth}
+                        height={productHeight}
                       />
                     </Link>
-                  </Styles.ProductLink>
-                </Styles.Product>
+                  </Styles.Product>
+                </Styles.ProductLink>
               ))}
             </Styles.CategoryProducts>
           </Styles.Category>

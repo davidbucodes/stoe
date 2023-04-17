@@ -13,7 +13,7 @@ export namespace Styles {
     flex-grow: 1;
     font-family: ${({ theme }) => theme.font.logo};
     font-size: ${({ theme }) => theme.fontSize.logo};
-    padding: 1vh 0 0 1vw;
+    padding: 1vh 0 0 2vw;
   `;
   export const OptionMenu = styled.div`
     position: relative;
