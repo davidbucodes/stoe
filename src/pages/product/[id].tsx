@@ -1,4 +1,4 @@
-import { ProductPageView } from "@component/pages/product/view";
+import { ProductPageView } from "@component/pages/product/[id].view";
 import { useGetExchangeRatesQuery } from "@component/store/apis/exchangeRates/api";
 import { useGetProductsQuery } from "@component/store/apis/products/api";
 import { useAppSelector } from "@component/store/hooks";

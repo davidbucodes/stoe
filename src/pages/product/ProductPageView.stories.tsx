@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Currency } from "@component/pages/api/exchangeRates";
-import { ProductPageView } from "@component/pages/product/view";
+import { ProductPageView } from "@component/pages/product/[id].view";
 import { exampleResponse as exchangeRatesExampleResponse } from "../../store/apis/exchangeRates/exampleResponse";
 import { exampleResponse as productsExampleResponse } from "../../store/apis/products/exampleResponse";
 
