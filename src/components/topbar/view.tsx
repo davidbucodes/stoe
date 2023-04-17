@@ -28,7 +28,7 @@ export function TopbarView() {
           <Styles.OptionMenuPopup
             ref={ref}
             autoFocus
-            onBlur={toggleOptionsMenu}
+            onBlur={() => setTimeout(toggleOptionsMenu)}
             tabIndex={1}
           >
             <SelectCurrency onSelected={toggleOptionsMenu} />
