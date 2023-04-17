@@ -10,5 +10,6 @@ export namespace SharedStyles {
   `;
   export const Page = styled(Flex)`
     overflow: auto;
+    padding: 0 5vh 10vw;
   `;
 }

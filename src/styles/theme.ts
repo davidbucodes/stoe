@@ -6,11 +6,15 @@ export const theme = {
     logo: "fantasy" as CSSProperties["fontFamily"],
     category: "sans-serif" as CSSProperties["fontFamily"],
     productName: "monospace" as CSSProperties["fontFamily"],
+    loading: "monospace" as CSSProperties["fontFamily"],
+    error: "monospace" as CSSProperties["fontFamily"],
   },
   fontSize: {
-    logo: "5vh",
-    category: "3vh",
+    logo: "6vh",
+    category: "5vh",
     productName: "2vh",
+    loading: "8vh",
+    error: "7vh",
   },
 };
 

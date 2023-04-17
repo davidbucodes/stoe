@@ -1,3 +1,5 @@
+import ErrorPage from "@component/components/pages/error";
+import LoadingPage from "@component/components/pages/loading";
 import { ProductPageView } from "@component/pages/product/[id].view";
 import { useGetExchangeRatesQuery } from "@component/store/apis/exchangeRates/api";
 import { useGetProductsQuery } from "@component/store/apis/products/api";
@@ -24,7 +26,7 @@ export default function ProductPage() {
   const router = useRouter();
 
   if (isLoadingGetProducts || isLoadingGetExchangeRates) {
-    return <Fragment>Loading</Fragment>;
+    return <LoadingPage />;
   }
   if (
     isErrorGetProducts ||
@@ -32,7 +34,7 @@ export default function ProductPage() {
     !products ||
     !exchangeRates
   ) {
-    return <Fragment>Error</Fragment>;
+    return <ErrorPage />;
   }
 
   const { id: productId } = router.query;

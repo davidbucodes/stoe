@@ -21,6 +21,21 @@ export default function Document() {
             flex-grow: 1;
             overflow: hidden;
           }
+
+          ::-webkit-scrollbar {
+            width: 0.7em;
+          }
+           
+          ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 0.1em rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+          }
+           
+          ::-webkit-scrollbar-thumb {
+            background-color: lightgrey;
+            outline: 1px solid darkgray;
+            border-radius: 10px;
+          }
             `}
         </style>
       </Head>

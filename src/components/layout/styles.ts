@@ -7,7 +7,6 @@ export namespace Styles {
     height: 100%;
   `;
   export const PageWrapper = styled.div`
-    padding: 0 20vw;
     display: flex;
     flex-grow: 1;
     overflow: auto;
@@ -23,6 +22,6 @@ export namespace Styles {
         rgb(255 255 255 / 0.5) 50px,
         rgb(255 255 255 / 0.5) 55px
       ),
-      linear-gradient(45deg, pink, skyblue);
+      linear-gradient(45deg, #b587be, #197fda);
   `;
 }

@@ -1,15 +1,16 @@
+import ErrorPage from "@component/components/pages/error";
+import LoadingPage from "@component/components/pages/loading";
 import { HomePageView } from "@component/pages/home/view";
 import { useGetProductsQuery } from "@component/store/apis/products/api";
-import { Fragment } from "react";
 
 export default function HomePage() {
   const { isLoading, data: products, isError } = useGetProductsQuery(null);
 
   if (isLoading) {
-    return <Fragment>Loading</Fragment>;
+    return <LoadingPage />;
   }
   if (isError || !products) {
-    return <Fragment>Error</Fragment>;
+    return <ErrorPage />;
   }
 
   return <HomePageView products={products} />;
