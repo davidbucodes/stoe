@@ -22,7 +22,7 @@ export function TopbarView() {
       <Styles.Logo>MyStore</Styles.Logo>
       <Styles.OptionMenu>
         <Styles.OptionMenuButton onClick={toggleOptionsMenu}>
-          Currency
+          Set Currency
         </Styles.OptionMenuButton>
         {isOptionsMenuOpened && (
           <Styles.OptionMenuPopup

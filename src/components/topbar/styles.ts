@@ -26,10 +26,15 @@ export namespace Styles {
   `;
   export const OptionMenu = styled.div`
     position: relative;
+    display: flex;
   `;
   export const OptionMenuButton = styled.div`
     cursor: pointer;
     user-select: none;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    font-weight: bold;
   `;
   export const OptionMenuPopup = styled.div`
     position: absolute;
