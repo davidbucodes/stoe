@@ -17,7 +17,6 @@ export namespace Styles {
   export const ProductDetail = styled.div`
     padding: 1vh 0;
   `;
-  export const ProductPrice = styled.div``;
   export const BackLink = styled(SharedStyles.Link)`
     padding: 1vh 0;
     > a {

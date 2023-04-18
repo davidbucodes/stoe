@@ -47,9 +47,9 @@ export function ProductPageView({
         <Styles.ProductDetailTitle>Description</Styles.ProductDetailTitle>
         <Styles.ProductDetail>{capitalize(description)}</Styles.ProductDetail>
         <Styles.ProductDetailTitle>Price</Styles.ProductDetailTitle>
-        <Styles.ProductPrice>
+        <Styles.ProductDetail>
           {convertedPrice} {selectedCurrency}
-        </Styles.ProductPrice>
+        </Styles.ProductDetail>
         <Styles.ProductDetailTitle>Rating</Styles.ProductDetailTitle>
         <Styles.ProductDetail>
           {range(Math.ceil(ratingRate)).map((i) => (
