@@ -77,6 +77,13 @@ function CategoryProducts({
     }
   }, [ref.current]);
 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      if (ref.current) {
+        updateRenderScroll();
+      }
+    });
+  }, []);
   const [scrollInterval, setScrollInterval] =
     useState<ReturnType<typeof setInterval>>();
 
