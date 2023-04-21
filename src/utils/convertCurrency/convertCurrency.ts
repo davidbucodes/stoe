@@ -1,18 +1,18 @@
 import { Currency, ExchangeRates } from "@component/pages/api/exchangeRates";
 
 export default function convertCurrency({
-  price,
-  fromCurrency,
+  usdPrice,
   toCurrency,
   exchangeRates,
 }: {
-  price: number;
-  fromCurrency: Currency;
+  usdPrice: number;
   toCurrency: Currency;
   exchangeRates: ExchangeRates;
 }) {
-  const convertedToUSD = price / exchangeRates.rates[fromCurrency];
-  const convertedFromUSD = exchangeRates.rates[toCurrency] * convertedToUSD;
+  if (toCurrency === Currency.USD) {
+    return { convertedPrice: usdPrice };
+  }
+  const convertedFromUSD = exchangeRates.rates[toCurrency] * usdPrice;
 
   const roundedConvertedPrice =
     Math.round((convertedFromUSD + Number.EPSILON) * 100) / 100;

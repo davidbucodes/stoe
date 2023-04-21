@@ -23,8 +23,7 @@ export function ProductPageView({
 
   useEffect(() => {
     const { convertedPrice } = convertCurrency({
-      price,
-      fromCurrency: Currency.USD,
+      usdPrice: price,
       toCurrency: selectedCurrency,
       exchangeRates,
     });
@@ -53,7 +52,7 @@ export function ProductPageView({
         <Styles.ProductDetailTitle>Rating</Styles.ProductDetailTitle>
         <Styles.ProductDetail>
           {range(Math.ceil(ratingRate)).map((i) => (
-            <Styles.Star />
+            <Styles.Star key={i} />
           ))}{" "}
         </Styles.ProductDetail>
         <Styles.ProductDetail>

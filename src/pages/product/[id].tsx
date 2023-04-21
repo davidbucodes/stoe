@@ -45,7 +45,7 @@ export default function ProductPage() {
   return (
     <ProductPageView
       product={product}
-      exchangeRates={exchangeRates.exchangeRates}
+      exchangeRates={exchangeRates}
       selectedCurrency={selectedCurrency}
     />
   );
